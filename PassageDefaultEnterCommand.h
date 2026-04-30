@@ -15,6 +15,7 @@ public:
     explicit PassageDefaultEnterCommand(GameObject* g) : Command(g) {}
 
     void execute() override;
+    std::string getCommandName() const override;
 };
 
 

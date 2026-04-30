@@ -7,3 +7,8 @@
 void RoomDefaultEnterCommand::execute() {
     std::cout << gameObject->getDescription() << "\n";
 }
+
+
+std::string RoomDefaultEnterCommand::getCommandName() const {
+    return "RoomDefaultEnterCommand";
+}

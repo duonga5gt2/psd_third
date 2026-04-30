@@ -8,3 +8,8 @@
 void PassageDefaultEnterCommand::execute() {
     static_cast<Passage*>(gameObject)->getTo()->enter();
 }
+
+
+std::string PassageDefaultEnterCommand::getCommandName() const {
+    return "PassageDefaultEnterCommand";
+}

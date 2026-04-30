@@ -19,6 +19,8 @@ public:
 
     void setUseCommand(std::shared_ptr<Command>);
 
+    std::string getCommandName() const;
+
 protected:
     std::shared_ptr<Command> useCommand;
 };

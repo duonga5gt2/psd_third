@@ -7,3 +7,8 @@
 void NullCommand::execute() {
     std::cout << "Nothing happens.\n";
 }
+
+
+std::string NullCommand::getCommandName() const {
+    return "This item can do something, I guess!.\n";
+}

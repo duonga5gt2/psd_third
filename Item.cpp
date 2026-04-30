@@ -16,6 +16,10 @@ void Item::use() {
     useCommand->execute();
 }
 
+std::string Item::getCommandName() const {
+    return useCommand->getCommandName();
+}
+
 void Item::setUseCommand(std::shared_ptr<Command> c) {
     useCommand = c;
 }

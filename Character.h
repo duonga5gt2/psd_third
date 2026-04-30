@@ -12,7 +12,7 @@
 class Character : public GameObject {
 public:
     Character(const std::string &, const std::string &);
-
+    virtual void talkToCharacter() const = 0;
 protected:
 //    std::vector<Item*> inventory;
 //    std::vector<std::string> tags;

@@ -27,10 +27,21 @@ public:
 
     Player &operator=(const Player &) = delete;
 
+    void addItemToInventory(Item*);
+    Item* retrieveItemFromInventory(const std::string& itemName);
+
+    void showInventory() const;
+
+    bool isItemAvailable(const std::string& itemName) const;
+
+    Item* getOneItemFromInventory(const std::string& itemName) const;
+
+    void talkToCharacter() const override;
+
 private:
     static Player *playerInstance;
     Room* currentRoom;
-
+    std::vector<Item*> inventory;
     Player() : Character("You", "You are a person, alike in dignity to any other, but uniquely you."),
                currentRoom(new NullRoom()) {}
 };

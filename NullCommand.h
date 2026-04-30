@@ -11,7 +11,7 @@
 class NullCommand : public Command {
 public:
     NullCommand() : Command(nullptr) {}
-
+    std::string getCommandName() const override;
     void execute() override;
 };
 

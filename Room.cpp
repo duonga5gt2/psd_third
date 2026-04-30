@@ -32,3 +32,56 @@ std::shared_ptr<Passage> Room::getPassage(const std::string &direction) {
         return std::make_shared<NullPassage>(this);
     }
 }
+
+Item* Room::getItem(const std::string &item) {
+    for (Item* i : items) {
+        if (i->getName() == item) {
+            return i;
+        }
+    }
+    return nullptr;
+}
+
+void Room::removeItem(const std::string& itemName) {
+    for (auto it = items.begin(); it != items.end(); ++it) {
+        if ((*it)->getName() == itemName) {
+            items.erase(it);
+            return;
+        }
+    }
+}
+
+void Room::addItem(Item* i) {
+    items.push_back(i);
+}
+
+
+Item* Room::retrieveItem(const std::string& itemName) {
+    Item* item = getItem(itemName);
+
+    if (item != nullptr) {
+        removeItem(itemName);
+    }
+
+    return item;
+}
+
+void Room::addCharacter(Character* c) {
+    characters.push_back(c);
+}
+
+
+std::vector<Item*> Room::getAllItems() const {
+    return items;
+}
+
+
+Character* Room::getCharacter(const std::string& itemName) {
+    for (auto it = characters.begin(); it != characters.end(); ++it) {
+        if ((*it)->getName() == itemName) {
+            return *it;
+        }
+    }
+
+    return nullptr;
+}

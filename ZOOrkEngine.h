@@ -33,6 +33,14 @@ private:
 
     void handleQuitCommand(std::vector<std::string>);
 
+    void handleCheckInventoryCommand();
+
+    void handleViewMapCommand(std::vector<std::string>);
+
+    void handleTalkCommand(std::vector<std::string>);
+
+    void handleAskCommand(std::vector<std::string>);
+
     static std::vector<std::string> tokenizeString(const std::string&);
 
     static std::string makeLowercase(std::string);
