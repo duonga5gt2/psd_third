@@ -54,6 +54,11 @@ void ZOOrkEngine::run() {
 }
 
 void ZOOrkEngine::handleGoCommand(std::vector<std::string> arguments) {
+    if (arguments.empty()) {
+        std::cout << "Go where?\n";
+        return;
+    }
+
     std::string direction;
     if (arguments[0] == "n" || arguments[0] == "north") {
         direction = "north";
