@@ -8,7 +8,7 @@
 #include "Command.h"
 #include "GameObject.h"
 #include "NullCommand.h"
-
+#include <memory>
 class Item : public GameObject {
 public:
     Item(const std::string &, const std::string &);

@@ -25,12 +25,13 @@ void Player::addItemToInventory(Item* item) {
 Item* Player::retrieveItemFromInventory(const std::string& itemName) {
     if (inventory.empty()) {
         std::cout << "No items in inventory.\n" << std::endl;
+        return nullptr;
     }
     for (auto it = inventory.begin(); it != inventory.end(); ++it) {
         if ((*it)->getName() == itemName) {
             Item* item = (*it);
             inventory.erase(it);
-            return (*it);
+            return item;
         }
     }
     return nullptr;

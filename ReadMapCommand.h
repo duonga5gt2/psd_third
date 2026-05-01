@@ -6,7 +6,7 @@
 #define ZOORK_READMAPCOMMAND_H
 #include "Command.h"
 
-#endif //ZOORK_READMAPCOMMAND_H
+
 
 class ReadMapCommand : public Command {
 public:
@@ -14,3 +14,5 @@ public:
     void execute() override;
     std::string getCommandName() const override;
 };
+
+#endif //ZOORK_READMAPCOMMAND_H

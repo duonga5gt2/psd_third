@@ -1,7 +1,7 @@
 
 #include "Aaron.h"
 #include "ReadMapCommand.h"
-
+#include <memory>
 void Aaron::talkToCharacter() const {
     std::cout << "Aaron: Hey, you look lost.\n";
     std::cout << "Aaron: If you need another map, type: ask aaron map\n";

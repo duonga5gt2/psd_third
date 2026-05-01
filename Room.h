@@ -23,7 +23,6 @@ public:
     void removeItem(const std::string&);
     Item* getItem(const std::string&);
     Item* retrieveItem(const std::string&);
-//    void addCharacter(Character*);
 
 
     void addPassage(const std::string &, std::shared_ptr<Passage>);
