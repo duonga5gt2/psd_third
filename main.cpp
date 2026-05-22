@@ -82,6 +82,23 @@ int main() {
 
     ZOOrkEngine zoork(zoo_entrance);
 
+    std::cout <<
+        "\nWelcome to Abandoned Zoo Escape!\n\n"
+        "Your goal is to explore the abandoned zoo, collect useful items,\n"
+        "interact with characters, and find a way to escape.\n\n"
+        "Basic commands:\n"
+        "- go [direction]      Example: go east\n"
+        "- look                Look around the current room\n"
+        "- look [item]         Look at an item in the room\n"
+        "- take [item]         Pick up an item\n"
+        "- drop [item]         Drop an item from your inventory\n"
+        "- check               Check your inventory\n"
+        "- view                View the zoo map if you have the map\n"
+        "- talk [character]    Example: talk aaron\n"
+        "- ask [character] [item]  Example: ask aaron map\n"
+        "- quit                Exit the game\n\n"
+        "Tip: item names use underscores, like bolt_cutters or warning_note.\n\n";
+
     zoork.run();
 
     return 0;

@@ -7,6 +7,7 @@
 #include <utility>
 #include "Room.h"
 #include "Aaron.h"
+#include <algorithm>
 ZOOrkEngine::ZOOrkEngine(std::shared_ptr<Room> start) {
     player = Player::instance();
     player->setCurrentRoom(start.get());
